@@ -36,7 +36,7 @@ public class StyleData implements Style {
     if (attribute == null) {
       attribute = items.get(resName.withPackageName(packageName));
       if (attribute != null && (!"android".equals(attribute.contextPackageName))) {
-        attribute = new Attribute(resName, attribute.value, resName.packageName);
+        attribute = new Attribute(resName, attribute.value, attribute.contextPackageName);
       }
     }
     return attribute;
